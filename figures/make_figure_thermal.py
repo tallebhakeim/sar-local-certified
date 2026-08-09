@@ -45,7 +45,7 @@ for phi, col, fx, fy in ((0.05, "tab:orange", 0.06, 2.5e2),
                          (0.005, "tab:blue", 2.6, 1.5e-2)):
     Rc = crossover_radius(phi, 1.0)
     ax1.plot([Rc * 1e6], [1.0], "o", color=col, ms=5.5, zorder=5)
-    ax1.annotate(f"{Rc*1e6:.0f} ¬µm", xy=(Rc * 1e6, 1.0),
+    ax1.annotate(f"{Rc*1e6:.0f} µm", xy=(Rc * 1e6, 1.0),
                  xytext=(Rc * 1e6 * fx, fy), color=col, fontsize=8,
                  arrowprops=dict(arrowstyle="->", color=col, lw=0.9))
 
@@ -54,9 +54,9 @@ ax1.text(1.3e-2, 2e-4, "isolated\nnanoparticle", fontsize=8, color="0.35")
 ax1.axvline(1000.0, color="0.5", lw=1.0, ls="-.")
 ax1.text(1250.0, 2e-7, "1 mm cluster\n(Rabin 2002)", fontsize=8, color="0.35")
 
-ax1.set_xlabel("cluster radius  $R$  (¬µm)")
+ax1.set_xlabel("cluster radius  $R$  (µm)")
 ax1.set_ylabel("peak temperature rise at centre  $\\Delta T$  (K)")
-ax1.set_title("(a)  Diffusion erases the peak below ~100 ¬µm", loc="left")
+ax1.set_title("(a)  Diffusion erases the peak below ~100 µm", loc="left")
 ax1.set_ylim(1e-10, 1e5)
 ax1.grid(True, which="major", alpha=0.3)
 ax1.legend(loc="upper left", frameon=False)
@@ -96,7 +96,7 @@ ax2.axhline(T_ref, color="0.25", lw=1.2, ls="--",
 
 ax2.set_xscale("log")
 ax2.set_xlabel("number of nodes")
-ax2.set_ylabel("$\\Delta T$ averaged over the 100 ¬µm ball  (K)")
+ax2.set_ylabel("$\\Delta T$ averaged over the 100 µm ball  (K)")
 ax2.set_title("(b)  The enclosure tightens, with no unknown constant",
               loc="left")
 ax2.grid(True, alpha=0.3)
